@@ -81,9 +81,8 @@ function renderGallery(images) {
       )
       .join('');
 
-    gallery.innerHTML = item;
-    const lightBox = new SimpleLightbox('.gallery-link');
-    lightBox.refresh();
+    gallery.insertAdjacentHTML('afterbegin', item);
+    new SimpleLightbox('.gallery-link').refresh();
   }
   loader.style.display = 'none';
 }
